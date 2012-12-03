@@ -1,15 +1,11 @@
 package com.example.mixnmatch;
 
-//import android.support.v4.app.FragmentActivity;
-
-import android.os.Bundle;
-import android.app.Activity;
 import android.app.ActionBar;
 import android.app.ActionBar.Tab;
-//import android.app.FragmentTransaction;
+import android.app.Activity;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
-import android.view.Window;
 
 public class HomeMainActivity extends Activity {
 
@@ -21,13 +17,16 @@ public class HomeMainActivity extends Activity {
 	    actionBar.setDisplayShowTitleEnabled(false);
 	    actionBar.setDisplayShowHomeEnabled(false);
 	    	    
-	    Tab tab = actionBar.newTab().setText(R.string.tab1).setTabListener(new TabListener<MenFragment>(this,"men", MenFragment.class));
+	    Tab tab = actionBar.newTab().setText(R.string.tab1).setTabListener
+	    		(new TabListener<MenFragment>(this,"men", MenFragment.class));
 	    actionBar.addTab(tab);
 
-	    tab = actionBar.newTab().setText(R.string.tab2).setTabListener(new TabListener<WomenFragment>(this,"women", WomenFragment.class));
+	    tab = actionBar.newTab().setText(R.string.tab2).setTabListener
+	    		(new TabListener<WomenFragment>(this,"women", WomenFragment.class));
 	    actionBar.addTab(tab);
 	    
-	    tab = actionBar.newTab().setText(R.string.tab3).setTabListener(new TabListener<StyleFragment>(this,"style", StyleFragment.class));
+	    tab = actionBar.newTab().setText(R.string.tab3).setTabListener
+	    		(new TabListener<StyleFragment>(this,"style", StyleFragment.class));
 	    actionBar.addTab(tab);
 	}
 	
