@@ -3,6 +3,7 @@ package com.example.mixnmatch;
 import android.app.ActionBar;
 import android.app.ActionBar.Tab;
 import android.app.Activity;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -28,6 +29,9 @@ public class HomeMainActivity extends Activity {
 	    tab = actionBar.newTab().setText(R.string.tab3).setTabListener
 	    		(new TabListener<StyleFragment>(this,"style", StyleFragment.class));
 	    actionBar.addTab(tab);
+	    
+	    this.setRequestedOrientation(
+	    		ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 	  
 	}
 	@Override
