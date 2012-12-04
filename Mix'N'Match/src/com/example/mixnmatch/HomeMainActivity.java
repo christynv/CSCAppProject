@@ -14,8 +14,8 @@ public class HomeMainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		ActionBar actionBar = getActionBar();
 	    actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-	    actionBar.setDisplayShowTitleEnabled(false);
-	    actionBar.setDisplayShowHomeEnabled(false);
+	    actionBar.setDisplayShowTitleEnabled(true);
+	    actionBar.setDisplayShowHomeEnabled(true);
 	    	    
 	    Tab tab = actionBar.newTab().setText(R.string.tab1).setTabListener
 	    		(new TabListener<MenFragment>(this,"men", MenFragment.class));
@@ -28,14 +28,13 @@ public class HomeMainActivity extends Activity {
 	    tab = actionBar.newTab().setText(R.string.tab3).setTabListener
 	    		(new TabListener<StyleFragment>(this,"style", StyleFragment.class));
 	    actionBar.addTab(tab);
+	  
 	}
-	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu)
 	{
 		MenuInflater inflater = getMenuInflater();
 		inflater.inflate(R.menu.menu_layout, menu);
-		return true;
-		
+		return super.onCreateOptionsMenu(menu);
 	}
 }

@@ -16,5 +16,12 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
-
+    
+    <style name="CustomActivityTheme" parent="@android:style/Theme.Holo.Light">
+        <item name="android:actionBarTabTextStyle">@style/CustomTabTextStyle</item>
+    </style>
+    
+    <style name="CustomTabTextStyle" parent="@android:style/TextAppearance.Holo">
+    </style>
+    
 </resources>
