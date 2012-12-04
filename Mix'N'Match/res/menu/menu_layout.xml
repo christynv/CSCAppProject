@@ -7,5 +7,5 @@
     android:id="@+id/photo"
     android:title="@string/photo"
     android:icon="@drawable/ic_action_photo"
-   	android:showAsAction="always"/>"
+   	android:showAsAction="always" />"
 </menu>
