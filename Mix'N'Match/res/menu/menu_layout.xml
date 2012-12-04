@@ -3,4 +3,9 @@
    <item
     android:id="@+id/random"
     android:title="@string/random"/>
+   <item 
+    android:id="@+id/photo"
+    android:title="@string/photo"
+    android:icon="@drawable/ic_action_photo"
+   	android:showAsAction="always"/>"
 </menu>
