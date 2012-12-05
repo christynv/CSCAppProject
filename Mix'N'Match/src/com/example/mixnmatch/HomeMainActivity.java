@@ -7,6 +7,7 @@ import java.util.Date;
 import android.app.ActionBar;
 import android.app.ActionBar.Tab;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.net.Uri;
@@ -17,6 +18,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class HomeMainActivity extends Activity {
 	private static final int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE = 100;
@@ -63,6 +65,9 @@ public class HomeMainActivity extends Activity {
 			case R.id.photo:
 				cameraStart();
 				return true;
+			case R.id.random:
+				showToast();
+				return true;
 			default:
 				return super.onOptionsItemSelected(item);
 		}
@@ -108,5 +113,15 @@ public class HomeMainActivity extends Activity {
 	    }
 
 	    return mediaFile;
+	}
+	private void showToast()
+	{
+		Context context = getApplicationContext();
+		CharSequence text = "Randomizing...";
+		int duration = Toast.LENGTH_SHORT;
+		
+		Toast toast = Toast.makeText(context, text, duration);
+		toast.show();
+		
 	}
 }
