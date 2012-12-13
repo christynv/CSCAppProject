@@ -21,6 +21,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -34,7 +35,7 @@ public void onCreate(Bundle savedInstanceState)
     setContentView(R.layout.woman_layout);
 
     ViewPager toppager = (ViewPager)findViewById( R.id.womantoppager );
-    MyPagerAdapter topadapter = new MyPagerAdapter();
+    MyPagerAdapter topadapter = new MyPagerAdapter(Images.womenTopImages);
     toppager.setAdapter(topadapter);
 
     toppager.setOffscreenPageLimit(topadapter.getCount());
@@ -42,7 +43,7 @@ public void onCreate(Bundle savedInstanceState)
     toppager.setPageMargin(15);
  
     ViewPager botpager = (ViewPager)findViewById( R.id.womanbottompager );
-    MyPagerAdapter botadapter = new MyPagerAdapter();
+    MyPagerAdapter botadapter = new MyPagerAdapter(Images.womenBottomImages);
     botpager.setAdapter(botadapter);
 
     botpager.setOffscreenPageLimit(botadapter.getCount());
@@ -67,6 +68,10 @@ public boolean onOptionsItemSelected(MenuItem item)
 			return true;
 		case R.id.random:
 			showToast();
+			return true;
+		case R.id.gallery:
+        	 Intent intent = new Intent(WomanActivity.this, GalleryActivity.class); //Different Gallery for women
+        	 WomanActivity.this.startActivity(intent);
 			return true;
 		default:
 			return super.onOptionsItemSelected(item);
@@ -124,27 +129,28 @@ private void showToast()
 // Nothing special about this adapter, just throwing up colored views for
 // demo
 private class MyPagerAdapter extends PagerAdapter{
-
+	Integer[] pics;
+	public MyPagerAdapter(Integer[] a)
+	{
+		pics = a;
+	}
     @Override
     public Object instantiateItem(ViewGroup container, int position){
-        TextView view = new TextView(WomanActivity.this);
-        view.setText("Item " + position);
-        view.setGravity(Gravity.CENTER);
-        view.setBackgroundColor(Color.argb(255, position * 50,
-                position * 10, position * 50));
-
-        container.addView(view);
-        return view;
+        ImageView imageView = new ImageView(WomanActivity.this);
+        imageView.setImageResource(pics[position]);
+        imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        ((ViewPager) container).addView(imageView,0); 
+        return imageView;
                                  }
 
     @Override
     public void destroyItem(ViewGroup container, int position, Object object)
                 {
-        container.removeView((View) object);}
+        container.removeView((ImageView) object);}
 
     @Override
     public int getCount(){
-     return 10;
+     return pics.length;
              }
 
     @Override
