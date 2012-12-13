@@ -49,6 +49,7 @@ public class HomeMainActivity extends Activity {
 	    		ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 	  
 	}
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu)
 	{
