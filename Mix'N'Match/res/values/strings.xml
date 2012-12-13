@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="tab1">Man</string>
-    <string name="tab2">Woman</string>
-    <string name="tab3">Looks</string>
-    <string name="random">Randomize</string>
-    <string name="app_name">MixNMatch</string>
-    <string name="photo">Upload</string>
-</resources>
