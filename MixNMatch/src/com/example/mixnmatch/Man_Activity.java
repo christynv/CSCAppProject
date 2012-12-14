@@ -13,6 +13,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.PagerTabStrip;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.Gravity;
@@ -37,16 +38,18 @@ public void onCreate(Bundle savedInstanceState)
     setContentView(R.layout.man_layout);
 
     ViewPager toppager = (ViewPager)findViewById( R.id.mentoppager );
+    
     MyPagerAdapter topadapter = new MyPagerAdapter(Images.menTopImages);
     toppager.setAdapter(topadapter);
-
+    toppager.setBackgroundColor(Color.WHITE);
     toppager.setOffscreenPageLimit(topadapter.getCount());
-
+    
     toppager.setPageMargin(15);
  
     ViewPager botpager = (ViewPager)findViewById( R.id.menbottompager );
     MyPagerAdapter botadapter = new MyPagerAdapter(Images.menBottomImages);
     botpager.setAdapter(botadapter);
+    botpager.setBackgroundColor(Color.WHITE);
 
     botpager.setOffscreenPageLimit(botadapter.getCount());
   
@@ -142,7 +145,7 @@ private class MyPagerAdapter extends PagerAdapter{
     public Object instantiateItem(ViewGroup container, int position){
         ImageView imageView = new ImageView(Man_Activity.this);
         imageView.setImageResource(pics[position]);
-        imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        imageView.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
         ((ViewPager) container).addView(imageView,0); 
         return imageView;
                                  }

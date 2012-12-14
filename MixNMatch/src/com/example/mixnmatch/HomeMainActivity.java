@@ -5,9 +5,11 @@ import java.util.Vector;
 
 import android.app.ActionBar;
 import android.content.pm.ActivityInfo;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.view.PagerTabStrip;
 import android.support.v4.view.ViewPager;
 
 
@@ -34,6 +36,9 @@ public class HomeMainActivity extends FragmentActivity {
 		this.pagerAdapter = new PageAdapter(super.getSupportFragmentManager(),fragments);
 		
 		ViewPager pager = (ViewPager)super.findViewById(R.id.homepager);
+	    PagerTabStrip pagerTabStrip = (PagerTabStrip) findViewById(R.id.pagerTabStrip);
+	    pagerTabStrip.setBackgroundColor(Color.BLACK);
+	    pagerTabStrip.setTextColor(Color.WHITE);
 		pager.setAdapter(this.pagerAdapter);
 		
 	}}
