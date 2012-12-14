@@ -11,17 +11,23 @@ public final class R {
     public static final class attr {
     }
     public static final class drawable {
-        public static final int burberry_woman=0x7f020000;
-        public static final int dressshirt=0x7f020001;
-        public static final int home_screen1=0x7f020002;
-        public static final int home_screen2=0x7f020003;
-        public static final int ic_action_photo=0x7f020004;
-        public static final int ic_launcher=0x7f020005;
-        public static final int jeans=0x7f020006;
-        public static final int jeans1=0x7f020007;
-        public static final int pants=0x7f020008;
-        public static final int shirt=0x7f020009;
-        public static final int sweater=0x7f02000a;
+        public static final int blouse=0x7f020000;
+        public static final int blouse2=0x7f020001;
+        public static final int blouse3=0x7f020002;
+        public static final int blouse4=0x7f020003;
+        public static final int burberry_woman=0x7f020004;
+        public static final int dressshirt=0x7f020005;
+        public static final int home_screen1=0x7f020006;
+        public static final int home_screen2=0x7f020007;
+        public static final int ic_action_photo=0x7f020008;
+        public static final int ic_launcher=0x7f020009;
+        public static final int jeans=0x7f02000a;
+        public static final int jeans1=0x7f02000b;
+        public static final int pants=0x7f02000c;
+        public static final int shirt=0x7f02000d;
+        public static final int skirt=0x7f02000e;
+        public static final int skirt2=0x7f02000f;
+        public static final int sweater=0x7f020010;
     }
     public static final class id {
         public static final int button1=0x7f070004;

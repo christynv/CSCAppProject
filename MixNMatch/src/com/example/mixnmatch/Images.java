@@ -3,18 +3,25 @@ package com.example.mixnmatch;
 
 public class Images{
 	static Integer [] menTopImages = {
-			R.drawable.dressshirt, R.drawable.sweater, R.drawable.shirt
+			R.drawable.dressshirt, R.drawable.sweater,
 	};
 	static Integer [] menBottomImages = {
-		R.drawable.pants, R.drawable.jeans, R.drawable.jeans1
+		R.drawable.pants, R.drawable.jeans
 	};
+	static Integer [] menImages = {
+		R.drawable.dressshirt, R.drawable.sweater,
+		R.drawable.pants, R.drawable.jeans
+	};
+	
 	static Integer [] womenBottomImages = {
-		R.drawable.burberry_woman,R.drawable.ic_action_photo,
-		R.drawable.ic_launcher
+		R.drawable.skirt,R.drawable.skirt2
 	};
 	static Integer [] womenTopImages = {
-		R.drawable.burberry_woman,R.drawable.ic_action_photo,
-		R.drawable.ic_launcher
+		R.drawable.blouse,R.drawable.blouse2,
+		R.drawable.blouse3, R.drawable.blouse4
 	};
-
+	static Integer [] womenImages = {
+		R.drawable.blouse,R.drawable.blouse2, R.drawable.blouse3, 
+		R.drawable.blouse4, R.drawable.skirt,R.drawable.skirt2
+	};
 }

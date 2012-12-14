@@ -26,7 +26,8 @@
         <activity android:name="ManActivity"></activity>
         <activity android:name="WomanActivity"></activity>
         <activity android:name="GalleryActivity"></activity>
-        
+        <activity android:name="MenGalleryActivity"></activity>
+        <activity android:name="WomenGalleryActivity"></activity>
 
     </application>
 

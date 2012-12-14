@@ -3,6 +3,7 @@ package com.example.mixnmatch;
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Random;
 
 import android.net.Uri;
 import android.os.Bundle;
@@ -31,26 +32,28 @@ public class ManActivity extends Activity{
 	private static final int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE = 100;
 	private Uri fileUri;
 	public static final int MEDIA_TYPE_IMAGE = 1;
-	
+	ViewPager toppager;
+	ViewPager botpager;
+	MyPagerAdapter topadapter;
+	MyPagerAdapter botadapter;
 public void onCreate(Bundle savedInstanceState)
 {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.man_layout);
 
-    ViewPager toppager = (ViewPager)findViewById( R.id.mentoppager );
+    toppager = (ViewPager)findViewById( R.id.mentoppager );
     
-    MyPagerAdapter topadapter = new MyPagerAdapter(Images.menTopImages);
+    topadapter = new MyPagerAdapter(Images.menTopImages);
     toppager.setAdapter(topadapter);
     toppager.setBackgroundColor(Color.WHITE);
     toppager.setOffscreenPageLimit(topadapter.getCount());
-    
     toppager.setPageMargin(15);
  
-    ViewPager botpager = (ViewPager)findViewById( R.id.menbottompager );
-    MyPagerAdapter botadapter = new MyPagerAdapter(Images.menBottomImages);
+    botpager = (ViewPager)findViewById( R.id.menbottompager );
+    botadapter = new MyPagerAdapter(Images.menBottomImages);
     botpager.setAdapter(botadapter);
     botpager.setBackgroundColor(Color.WHITE);
-
+   // botpager.beginFakeDrag();
     botpager.setOffscreenPageLimit(botadapter.getCount());
   
     botpager.setPageMargin(15);
@@ -72,11 +75,17 @@ public boolean onOptionsItemSelected(MenuItem item)
 			cameraStart();
 			return true;
 		case R.id.random:
+			Random gen = new Random(System.currentTimeMillis());
+			final int page = gen.nextInt(topadapter.getCount());
+			final int page1 = gen.nextInt(botadapter.getCount());
+			toppager.setCurrentItem(page);
+			botpager.setCurrentItem(page1);
+
 			showToast();
 			return true;
 		case R.id.gallery:
-         	 Intent intent = new Intent(ManActivity.this, GalleryActivity.class);
-         	 ManActivity.this.startActivity(intent);
+        	 Intent intent = new Intent(ManActivity.this, MenGalleryActivity.class);
+        	 ManActivity.this.startActivity(intent);
 			return true;
 		default:
 			return super.onOptionsItemSelected(item);
