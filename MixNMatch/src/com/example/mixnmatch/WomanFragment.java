@@ -14,7 +14,7 @@ public class WomanFragment extends Fragment {
 			Bundle savedInstanceState)
 	{
 		View mView = inflater.inflate(R.layout.woman_frag_layout, container, false);
-		
+		mView.setBackgroundResource(R.drawable.home_screen2);
 		Button button = (Button)mView.findViewById(R.id.button1);
         button.setOnClickListener(new View.OnClickListener() 
        {

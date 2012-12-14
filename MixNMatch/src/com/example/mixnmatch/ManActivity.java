@@ -26,7 +26,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Man_Activity extends Activity{
+public class ManActivity extends Activity{
 	
 	private static final int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE = 100;
 	private Uri fileUri;
@@ -75,8 +75,8 @@ public boolean onOptionsItemSelected(MenuItem item)
 			showToast();
 			return true;
 		case R.id.gallery:
-         	 Intent intent = new Intent(Man_Activity.this, GalleryActivity.class);
-         	 Man_Activity.this.startActivity(intent);
+         	 Intent intent = new Intent(ManActivity.this, GalleryActivity.class);
+         	 ManActivity.this.startActivity(intent);
 			return true;
 		default:
 			return super.onOptionsItemSelected(item);
@@ -143,7 +143,7 @@ private class MyPagerAdapter extends PagerAdapter{
 	}
     @Override
     public Object instantiateItem(ViewGroup container, int position){
-        ImageView imageView = new ImageView(Man_Activity.this);
+        ImageView imageView = new ImageView(ManActivity.this);
         imageView.setImageResource(pics[position]);
         imageView.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
         ((ViewPager) container).addView(imageView,0); 

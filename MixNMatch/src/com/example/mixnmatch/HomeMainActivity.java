@@ -11,6 +11,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.PagerTabStrip;
 import android.support.v4.view.ViewPager;
+import android.view.Window;
 
 
 public class HomeMainActivity extends FragmentActivity {
@@ -19,14 +20,10 @@ public class HomeMainActivity extends FragmentActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
 		setContentView(R.layout.activity_home_main);
 		initializePaging();
-		
-		ActionBar actionBar = getActionBar();
-	    actionBar.setDisplayShowTitleEnabled(true);
-	    actionBar.setDisplayShowHomeEnabled(true);
-	    this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-		  
+		this.setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT); 
 	}
 	private void initializePaging()
 	{

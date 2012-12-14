@@ -22,7 +22,7 @@ public class Man_frag extends Fragment {
        {
             public void onClick(View v) 
            {
-          	 Intent intent = new Intent(getActivity(), Man_Activity.class);
+          	 Intent intent = new Intent(getActivity(), ManActivity.class);
           	 getActivity().startActivity(intent);
          }
         });
