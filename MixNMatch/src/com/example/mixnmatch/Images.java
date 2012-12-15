@@ -6,11 +6,11 @@ public class Images{
 			R.drawable.dressshirt, R.drawable.sweater,
 	};
 	static Integer [] menBottomImages = {
-		R.drawable.pants, R.drawable.jeans
+		R.drawable.pants, R.drawable.jeans, R.drawable.jeans1
 	};
 	static Integer [] menImages = {
 		R.drawable.dressshirt, R.drawable.sweater,
-		R.drawable.pants, R.drawable.jeans
+		R.drawable.pants, R.drawable.jeans, R.drawable.jeans1
 	};
 	
 	static Integer [] womenBottomImages = {

@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,6 +28,7 @@ public class WomenGalleryActivity extends Activity {
 
 	      MyGrid = (GridView)findViewById(R.id.gridlayout);
 	      MyGrid.setAdapter(new ImageAdapter(Images.womenImages));
+	      MyGrid.setBackgroundColor(Color.WHITE);
 	      
 	      MyGrid.setOnItemClickListener(new OnItemClickListener() {
 

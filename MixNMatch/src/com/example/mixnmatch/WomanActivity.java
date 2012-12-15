@@ -42,7 +42,7 @@ public void onCreate(Bundle savedInstanceState)
     toppager = (ViewPager)findViewById( R.id.womantoppager );
     topadapter = new MyPagerAdapter(Images.womenTopImages);
     toppager.setAdapter(topadapter);
-
+    toppager.setBackgroundColor(Color.WHITE);
     toppager.setOffscreenPageLimit(topadapter.getCount());
  
     toppager.setPageMargin(15);
@@ -50,7 +50,7 @@ public void onCreate(Bundle savedInstanceState)
     botpager = (ViewPager)findViewById( R.id.womanbottompager );
     botadapter = new MyPagerAdapter(Images.womenBottomImages);
     botpager.setAdapter(botadapter);
-
+    botpager.setBackgroundColor(Color.WHITE);
     botpager.setOffscreenPageLimit(botadapter.getCount());
 
     botpager.setPageMargin(15);
@@ -150,7 +150,7 @@ private class MyPagerAdapter extends PagerAdapter{
     public Object instantiateItem(ViewGroup container, int position){
         ImageView imageView = new ImageView(WomanActivity.this);
         imageView.setImageResource(pics[position]);
-        imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        imageView.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
         ((ViewPager) container).addView(imageView,0); 
         return imageView;
                                  }
