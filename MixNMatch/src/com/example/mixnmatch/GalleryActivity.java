@@ -35,7 +35,7 @@ public class GalleryActivity extends Activity{
 	      @Override
 	      public int getCount() 
 	      {
-	         return 15;
+	         return 100;
 	      }
 
 	      @Override

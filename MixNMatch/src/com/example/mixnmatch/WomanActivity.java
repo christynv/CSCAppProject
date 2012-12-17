@@ -54,6 +54,13 @@ public void onCreate(Bundle savedInstanceState)
     botpager.setOffscreenPageLimit(botadapter.getCount());
 
     botpager.setPageMargin(15);
+    
+    Bundle extras = getIntent().getExtras();
+    if (extras!=null)
+    {
+    	int value = extras.getInt("id");
+    	toppager.setCurrentItem(value);
+    }
 }
 
 @Override
@@ -169,5 +176,7 @@ private class MyPagerAdapter extends PagerAdapter{
     public boolean isViewFromObject(View view, Object object)
          {
         return (view == object);
-               }}}
+         }
+    }
+}
 

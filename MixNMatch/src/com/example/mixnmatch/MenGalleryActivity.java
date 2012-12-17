@@ -26,14 +26,14 @@ public class MenGalleryActivity extends Activity{
 	      setContentView(R.layout.gallery_layout);
 
 	      MyGrid = (GridView)findViewById(R.id.gridlayout);
-	      MyGrid.setAdapter(new ImageAdapter(Images.menImages));
+	      MyGrid.setAdapter(new ImageAdapter(Images.menImages, this));
 	      MyGrid.setBackgroundColor(Color.WHITE);
 	      
 	      MyGrid.setOnItemClickListener(new OnItemClickListener() {
 
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view, int position,	long id){
-                // Sending image id to FullScreenActivity
+                // Sending image id to ManActivity
                 Intent i = new Intent(getApplicationContext(), ManActivity.class);
                 // passing array index
                 i.putExtra("id", position);
@@ -43,55 +43,4 @@ public class MenGalleryActivity extends Activity{
 
 		  this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 	   }
-	   
-	   public class ImageAdapter extends BaseAdapter {
-	      Context MyContext;
-	      Integer [] pics;
-	      
-	      public ImageAdapter(Integer [] b)
-	      {
-	         pics = b;
-	      }
-	      
-	      @Override
-	      public int getCount() 
-	      {
-	         return pics.length;
-	      }
-
-	      @Override
-	      public View getView(int position, View convertView, ViewGroup parent) 
-	      {
-	         View MyView = convertView;
-	         
-	         if ( convertView == null )
-	         {
-	                                /*we define the view that will display on the grid*/
-	            
-	            //Inflate the layout
-	            LayoutInflater li = getLayoutInflater();
-	            MyView = li.inflate(R.layout.gallery_frag, null);
-	            	
-	            // Add The Image!!!           
-	            ImageView iv = (ImageView)MyView.findViewById(R.id.grid_item_image);
-	            iv.setImageResource(pics[position]);
-	            iv.setLayoutParams(new LinearLayout.LayoutParams(300, 300));
-	            iv.setScaleType(ImageView.ScaleType.CENTER_INSIDE);  
-	         } 
-	         return MyView;
-	      }
-
-	      @Override
-	      public Object getItem(int arg0) {
-	         // TODO Auto-generated method stub
-	         return null;
-	      }
-
-	      @Override
-	      public long getItemId(int arg0) {
-	         // TODO Auto-generated method stub
-	         return 0;
-	      }
-	   }
-
 	}

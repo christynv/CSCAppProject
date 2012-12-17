@@ -53,10 +53,17 @@ public void onCreate(Bundle savedInstanceState)
     botadapter = new MyPagerAdapter(Images.menBottomImages);
     botpager.setAdapter(botadapter);
     botpager.setBackgroundColor(Color.WHITE);
-   // botpager.beginFakeDrag();
+
     botpager.setOffscreenPageLimit(botadapter.getCount());
   
     botpager.setPageMargin(15);
+    
+    Bundle extras = getIntent().getExtras();
+    if (extras!=null)
+    {
+    	int value = extras.getInt("id");
+    	toppager.setCurrentItem(value);
+    }
 }
 
 @Override
