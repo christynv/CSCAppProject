@@ -1,3 +1,6 @@
+/**RICHARD LUU & CHRISTYN VASQUEZ**/
+/** PAGE ADAPTER FOR FRAGMENT MANAGMENT **/
+
 package com.example.mixnmatch;
 
 import java.util.List;

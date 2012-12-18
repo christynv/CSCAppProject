@@ -1,3 +1,6 @@
+/** RICHARD LUU & CHRISTYN VASQUEZ **/
+/**GALLERY ACTIVITY FOR MEN PAGE**/
+
 package com.example.mixnmatch;
 
 import android.app.Activity;
@@ -36,11 +39,16 @@ public class MenGalleryActivity extends Activity{
                 // Sending image id to ManActivity
                 Intent i = new Intent(getApplicationContext(), ManActivity.class);
                 // passing array index
-                i.putExtra("id", position);
+                
+             //   i.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                i.putExtra("id", position); 
                 startActivity(i);
+                i.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                finish();
 			}
 	      });
 
 		  this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+		  
 	   }
 	}

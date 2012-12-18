@@ -1,3 +1,6 @@
+/**RICHARD LUU & CHRISTYN VASQUEZ**/
+/** ADAPTER CLASS INSTANTIATE AND HANDLES IMAGE VIEW **/
+
 package com.example.mixnmatch;
 
 import android.content.Context;

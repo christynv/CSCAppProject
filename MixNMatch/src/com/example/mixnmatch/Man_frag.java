@@ -1,4 +1,5 @@
 package com.example.mixnmatch;
+//**FRAGMENT FOR MEN HOME PAGE**/
 
 import android.support.v4.app.Fragment;
 import android.content.Intent;

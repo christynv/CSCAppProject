@@ -1,3 +1,6 @@
+/**RICHARD LUU & CHRISTYN VASQUEZ**/
+/**FRAGMENT FOR WOMAN PAGE AT HOME SCREEN**/
+
 package com.example.mixnmatch;
 import android.support.v4.app.Fragment;
 import android.content.Intent;

@@ -1,3 +1,6 @@
+/**RICHARD LUU & CHRISTYN VASQUEZ**/
+/** GALLERY ACTIVITY FOR WOMEN PAGE*/
+
 package com.example.mixnmatch;
 
 import android.app.Activity;
@@ -31,11 +34,11 @@ public class WomenGalleryActivity extends Activity {
 
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view, int position,	long id){
-             // Sending image id to FullScreenActivity
              Intent i = new Intent(getApplicationContext(), WomanActivity.class);
-             // passing array index
              i.putExtra("id", position);
              startActivity(i);
+             i.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+             finish();
 			}
 	      }); 
 

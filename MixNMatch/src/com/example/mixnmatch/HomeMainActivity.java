@@ -1,9 +1,11 @@
+/*****Richard Luu & Christyn Vasquez****/
+/* Home Page Activity Containing Two Fragment Classes */
+
 package com.example.mixnmatch;
 
 import java.util.List;
 import java.util.Vector;
 
-import android.app.ActionBar;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -11,7 +13,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.PagerTabStrip;
 import android.support.v4.view.ViewPager;
-import android.view.Window;
 
 
 public class HomeMainActivity extends FragmentActivity {

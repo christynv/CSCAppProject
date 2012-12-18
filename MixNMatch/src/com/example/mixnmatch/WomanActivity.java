@@ -1,3 +1,6 @@
+/**RICHARD LUU & CHRISTYN VASQUEZ**/
+/**ACTIVITY FOR WOMAN**/
+
 package com.example.mixnmatch;
 
 import java.io.File;
@@ -91,6 +94,7 @@ public boolean onOptionsItemSelected(MenuItem item)
 		case R.id.gallery:
        	 Intent intent = new Intent(WomanActivity.this, WomenGalleryActivity.class); //Different Gallery for women
        	 WomanActivity.this.startActivity(intent);
+       	 finish();
 			return true;
 		default:
 			return super.onOptionsItemSelected(item);

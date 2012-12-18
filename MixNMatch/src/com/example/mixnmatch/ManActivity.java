@@ -1,3 +1,6 @@
+/** CHRISTYN VASQUEZ & RICHARD LUU**/
+/**ACTIVITY FOR MEN PAGE**/
+
 package com.example.mixnmatch;
 
 import java.io.File;
@@ -93,13 +96,14 @@ public boolean onOptionsItemSelected(MenuItem item)
 		case R.id.gallery:
         	 Intent intent = new Intent(ManActivity.this, MenGalleryActivity.class);
         	 ManActivity.this.startActivity(intent);
+        	 finish();
 			return true;
 		default:
 			return super.onOptionsItemSelected(item);
 	}
 }
 public void cameraStart()
-{
+{ 
 	Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
 	fileUri = getOutputMediaFileUri(MEDIA_TYPE_IMAGE);
 	intent.putExtra(MediaStore.EXTRA_OUTPUT, fileUri);
@@ -111,9 +115,7 @@ private static Uri getOutputMediaFileUri(int type)
 	return Uri.fromFile(getOutputMediaFile(type));
 }
 private static File getOutputMediaFile(int type){
-    // To be safe, you should check that the SDCard is mounted
-    // using Environment.getExternalStorageState() before doing this.
-
+//TO DO CREATE TRY ERROR IF NO SD CARD MOUNTED
     File mediaStorageDir = new File(Environment.getExternalStoragePublicDirectory(
               Environment.DIRECTORY_PICTURES), "MyCameraApp");
 
@@ -123,8 +125,6 @@ private static File getOutputMediaFile(int type){
             return null;
         }
     }
-
-    // Create a media file name
     String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
     File mediaFile;
     if (type == MEDIA_TYPE_IMAGE){
@@ -148,9 +148,6 @@ private void showToast()
 	
 }
 
-
-// Nothing special about this adapter, just throwing up colored views for
-// demo
 private class MyPagerAdapter extends PagerAdapter{
 	Integer[] pics;
 	public MyPagerAdapter(Integer[] a)
