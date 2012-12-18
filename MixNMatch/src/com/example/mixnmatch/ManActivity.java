@@ -125,7 +125,6 @@ private static Uri getOutputMediaFileUri(int type)
 	return Uri.fromFile(getOutputMediaFile(type));
 }
 private static File getOutputMediaFile(int type){
-//TO DO CREATE TRY ERROR IF NO SD CARD MOUNTED
     File mediaStorageDir = new File(Environment.getExternalStoragePublicDirectory(
               Environment.DIRECTORY_PICTURES), "MyCameraApp");
 

@@ -36,11 +36,9 @@ public class MenGalleryActivity extends Activity{
 
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view, int position,	long id){
-                // Sending image id to ManActivity
-                Intent i = new Intent(getApplicationContext(), ManActivity.class);
-                // passing array index
                 
-             //   i.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                Intent i = new Intent(getApplicationContext(), ManActivity.class);
+
                 i.putExtra("id", position); 
                 startActivity(i);
                 i.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
