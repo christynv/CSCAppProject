@@ -82,6 +82,10 @@ public boolean onOptionsItemSelected(MenuItem item)
 	switch(item.getItemId())
 	{
 		case R.id.photo:
+			if(!Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState())){
+			    Toast.makeText(this, "No SD Card", Toast.LENGTH_LONG).show();
+			    return true;
+	}
 			cameraStart();
 			return true;
 		case R.id.random:

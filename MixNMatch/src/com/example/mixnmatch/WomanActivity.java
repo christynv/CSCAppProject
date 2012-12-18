@@ -55,7 +55,6 @@ public void onCreate(Bundle savedInstanceState)
     botpager.setAdapter(botadapter);
     botpager.setBackgroundColor(Color.WHITE);
     botpager.setOffscreenPageLimit(botadapter.getCount());
-
     botpager.setPageMargin(15);
     
     Bundle extras = getIntent().getExtras();
@@ -79,6 +78,10 @@ public boolean onOptionsItemSelected(MenuItem item)
 	switch(item.getItemId())
 	{
 		case R.id.photo:
+			if(!Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState())){
+			    Toast.makeText(this, "No SD Card", Toast.LENGTH_LONG).show();
+			    return true;
+	}
 			cameraStart();
 			return true;
 		case R.id.random:
@@ -113,8 +116,6 @@ private static Uri getOutputMediaFileUri(int type)
 	return Uri.fromFile(getOutputMediaFile(type));
 }
 private static File getOutputMediaFile(int type){
-    // To be safe, you should check that the SDCard is mounted
-    // using Environment.getExternalStorageState() before doing this.
 
     File mediaStorageDir = new File(Environment.getExternalStoragePublicDirectory(
               Environment.DIRECTORY_PICTURES), "MyCameraApp");
@@ -126,7 +127,6 @@ private static File getOutputMediaFile(int type){
         }
     }
 
-    // Create a media file name
     String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
     File mediaFile;
     if (type == MEDIA_TYPE_IMAGE){
@@ -149,8 +149,7 @@ private void showToast()
 	toast.show();
 	
 }
-// Nothing special about this adapter, just throwing up colored views for
-// demo
+
 private class MyPagerAdapter extends PagerAdapter{
 	Integer[] pics;
 	public MyPagerAdapter(Integer[] a)

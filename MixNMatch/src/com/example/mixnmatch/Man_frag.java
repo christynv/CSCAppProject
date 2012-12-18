@@ -28,8 +28,6 @@ public class Man_frag extends Fragment {
          }
         });
         
-		return mView;
-				//(LinearLayout)inflater.inflate(R.layout.man_frag_layout, container, false);
-
+		return mView;		
 	}
 }
