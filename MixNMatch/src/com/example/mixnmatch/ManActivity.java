@@ -65,7 +65,13 @@ public void onCreate(Bundle savedInstanceState)
     if (extras!=null)
     {
     	int value = extras.getInt("id");
+    	if (value > topadapter.getCount())
+    	{
+    		botpager.setCurrentItem(value - topadapter.getCount());
+    	}
+    	else{
     	toppager.setCurrentItem(value);
+    	}
     }
 }
 
