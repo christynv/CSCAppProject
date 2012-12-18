@@ -10,17 +10,20 @@ public class Images{
 			R.drawable.peacoat, R.drawable.sweater2, R.drawable.sweater3
 	};
 	static Integer [] menBottomImages = {
-		R.drawable.pants, R.drawable.jeans, R.drawable.jeans1
+		R.drawable.pants, R.drawable.jeans, R.drawable.jeans1, 
+		R.drawable.jeans2
 	};
 	static Integer [] menImages = {
 		R.drawable.dressshirt, R.drawable.sweater, R.drawable.plaid,
 		R.drawable.peacoat, R.drawable.sweater2, R.drawable.sweater3,
 		R.drawable.pants, R.drawable.jeans, R.drawable.jeans1,
+		R.drawable.jeans2
 	
 	};
 	
 	static Integer [] womenBottomImages = {
-		R.drawable.pants2, R.drawable.pants1, R.drawable.pants3
+		R.drawable.pants2, R.drawable.pants1, R.drawable.pants3,
+		R.drawable.pants4
 	};
 	static Integer [] womenTopImages = {
 		R.drawable.top3, R.drawable.blouse,R.drawable.blouse2,
@@ -33,6 +36,6 @@ public class Images{
 		R.drawable.blouse3, R.drawable.blouse4,
 		R.drawable.top1,R.drawable.top2, 
 		R.drawable.top4, R.drawable.pants2, R.drawable.pants1, 
-		R.drawable.pants3
+		R.drawable.pants3, R.drawable.pants4
 	};
 }
